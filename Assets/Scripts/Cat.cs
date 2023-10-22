@@ -17,16 +17,20 @@ public class Cat : Animal
 
     public override void Move(Vector3 position)
     {
-        Rigidbody animalRb = GetComponent<Rigidbody>();
-        animalRb.AddForce(Vector3.up * 200f);
+        Jump();
         base.Move(position);
     }
     public override void Move(Vector3 speed, float time)
     {
-        Rigidbody animalRb = GetComponent<Rigidbody>();
-        animalRb.AddForce(Vector3.up * 200f);
+        Jump();
         base.Move(speed,time);
     }
+    //Abstraction
 
+    private void Jump()
+    {
+        Rigidbody animalRb = GetComponent<Rigidbody>();
+        animalRb.AddForce(Vector3.up * 200f);
+    }
     
 }
