@@ -10,7 +10,7 @@ public abstract class Animal : MonoBehaviour
 
     private void Start()
     {
-        animalRb=GetComponent<Rigidbody>();
+       
     }
 
     public virtual void Move(Vector3 position)
@@ -19,6 +19,7 @@ public abstract class Animal : MonoBehaviour
     }
     public virtual void Move(Vector3 speed, float time)
     {
+        animalRb = GetComponent<Rigidbody>();
         StartCoroutine(MoveWithSpeed(speed, time));
     }
     IEnumerator MoveWithSpeed(Vector3 speed, float time)
@@ -27,6 +28,6 @@ public abstract class Animal : MonoBehaviour
         yield return new WaitForSeconds(time);
         animalRb.velocity = Vector3.zero;
     }
-    protected abstract void Talk();
+    public abstract void Talk();
 
 }
