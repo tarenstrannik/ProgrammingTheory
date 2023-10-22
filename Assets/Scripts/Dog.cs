@@ -5,8 +5,8 @@ using UnityEngine;
 public class Dog : Animal
 {
     //Inheritance
-    public override void Talk()
+    public override void Talk(string name)
     {
-        Debug.Log("Gav");
+        Debug.Log(name+" "+ "Gav");
     }
 }

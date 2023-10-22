@@ -8,9 +8,9 @@ public class Cat : Animal
     
 
     //Inheritance
-    public override void Talk()
+    public override void Talk(string name)
     {
-        Debug.Log("Meou");
+        Debug.Log(name+" "+"Meou");
     }
 
     //Polymorphism
